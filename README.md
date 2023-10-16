@@ -48,7 +48,7 @@
 * `.gitignore`
     - Part of Git, includes files and folders to be ignored by Git version control
 
-* `capstine_env.yml`
+* `capstone_env.yml`
     - Conda environment specification
 
 * `Makefile`
