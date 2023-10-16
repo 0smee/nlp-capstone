@@ -27,8 +27,10 @@
 ...
 
 * `data` 
-    - contains link to copy of the dataset (stored in a publicly accessible Google Drive folder)
-    - saved copy of aggregated / processed data as long as those are not too large (> 10 MB)
+
+Data folder:
+    - https://drive.google.com/drive/folders/1vIgwqKBAsJvMQIZZfR_u03OFdF4BsEj5?usp=sharing
+
 
 * `model`
     - joblib dump of final model / model object
@@ -61,7 +63,7 @@
     - Project license
 
 ### Dataset
-
+ 
 ...
 ...
 ...
