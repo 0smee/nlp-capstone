@@ -4,10 +4,11 @@
 
 ### Project Overview
 
-... 
-...
-...
-
+I am interested in understanding the reliability of reviews left by customers online. Consumers’ online shopping experience can be improved by better understanding
+the reviews that are left on products. By improving the customer experience, online retailers will continue to see a huge increase in total sales. First time buyers will be
+particularly impacted by reviews, as they search for their ideal product. Users making large purchases will also be impacted by the quality of reviews available.
+Organisations or people following a budget will also use reviews to guide their purchase. We can use machine learning to help better understand the quality of reviews. For example, we can perform sentiment analysis to gain further insights of the text contents of a review, and try to understand how reliable a source the reviewer is. We
+can compare the overall sentiment of a review to its “star rating” and try to understand discrepancies in these two different forms of reviews.
 ### Walkthrough Demo
 
 ...
@@ -63,17 +64,26 @@ Data folder:
     - Project license
 
 ### Dataset
- 
-...
-...
-...
+ ## Data Dictionary
+
+| Column name    | Datatype | Measures| Notes|
+| -------------- | -------- | ---------------------------------------------------- | --------------------------------------- |
+| overall        | float    | Overall star rating of review   |                                         |
+| verified       | boolean  | Whether the review has been verified as real or not. | |
+| reviewTime     | object   | Time of review    | If needed can change type to datetime64 |
+| reviewerID     | object   | Unique ID of reviewer                                |                                         |
+| asin           | object   | Product metadata  |Amazon Standard Identification Number|
+| style          | object   | Product metadata                                     |                                         |
+| reviewerName   | object   | Name of reviewer                                     |                                         |
+| reviewText     | object   | Textual contents of review                           |                                         |
+| summary        | object   | Textual summary of review                            |                                         |
+| unixReviewTime | int64    | Time of review since Unix Epoch on January 1st, 1970 |                                         |
+| vote           | object   | Count of usefulness vote                             |                                         |
+| image          | object   | Image of product reviewed                            |                                         |
 
 ### Credits & References
 Justifying recommendations using distantly-labeled reviews and fined-grained aspects
 Jianmo Ni, Jiacheng Li, Julian McAuley
-Empirical Methods in Natural Language Processing (EMNLP), 2019
-...
-...
-...
+Empirical Methods in Natural Language Processing (EMNLP), 2019 https://cseweb.ucsd.edu/~jmcauley/datasets/amazon_v2/
 
 --------
