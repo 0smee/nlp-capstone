@@ -1,6 +1,17 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/0GBBWOiF)
 ## Sentiment Analysis of Amazon Reviews
 =========================
+Archive notebooks show old work no communication in them. I have worked in:
+first-explore
+preprocessing both single words and ngrams
+basic_logistic_ngrams
+decision_tree_ngrams
+randomforest
+
+I plan to try add more context in the preprocessing stage, and improve the communication in the notebooks
+
+
+
 
 ### Project Overview
 
