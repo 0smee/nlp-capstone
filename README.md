@@ -44,16 +44,57 @@ can compare the overall sentiment of a review to its “star rating” and try t
 ...
 
 ### Project Organization
+.
+├── LICENSE
+├── Makefile
+├── README.md
+├── README.md.save
+├── data
+│   └── https://drive.google.com/drive/folders/1vIgwqKBAsJvMQIZZfR_u03OFdF4BsEj5?usp=sharing
+├── environment.yml
+├── model
+│   └── sentiment-model.pkl
+├── notebooks
+│   ├── 04-modelling.ipynb
+│   ├── 05-findings.ipynb
+│   ├── __pycache__
+│   │   └── source.cpython-38.pyc
+│   ├── archive
+│   │   ├── basic-logistic-archive.ipynb
+│   │   ├── decision-tree-archive.ipynb
+│   │   ├── decision-tree_smote.ipynb
+│   │   └── spaCy-exploration-one-MISC.ipynb
+│   ├── basic-logistic_2grams.ipynb
+│   ├── basic-logistic_ngrams.ipynb
+│   ├── decision-tree_2grams.ipynb
+│   ├── decision-tree_ngrams.ipynb
+│   ├── first_explore.ipynb
+│   ├── model-comparison.ipynb
+│   ├── newEDA.ipynb
+│   ├── preprocessing_2grams.ipynb
+│   ├── preprocessing_ngrams.ipynb
+│   ├── preprocessing_single-words.ipynb
+│   ├── randomforest.ipynb
+│   ├── randomforest_2grams.ipynb
+│   └── source.py
+├── references
+│   └── papers.md
+├── reports
+│   ├── Sprint 1 presentation.pdf
+│   ├── Sprint 2 (1).pdf
+│   └── figures
+│       ├── dist.png
+│       ├── logregout.png
+│       ├── output2.png
+│       ├── project-flowchart.svg
+│       └── vectorexample.png
+└── src
 
-...
-...
-...
 
 * `data` 
 
 Data folder:
     - https://drive.google.com/drive/folders/1vIgwqKBAsJvMQIZZfR_u03OFdF4BsEj5?usp=sharing
-
 
 * `model`
     - joblib dump of final model / model object
