@@ -44,6 +44,7 @@ can compare the overall sentiment of a review to its “star rating” and try t
 ...
 
 ### Project Organization
+```
 .
 ├── LICENSE
 ├── Makefile
@@ -51,6 +52,7 @@ can compare the overall sentiment of a review to its “star rating” and try t
 ├── README.md.save
 ├── data
 │   └── https://drive.google.com/drive/folders/1vIgwqKBAsJvMQIZZfR_u03OFdF4BsEj5?usp=sharing
+│   └── reviews_vector_ngrams.pkl
 ├── environment.yml
 ├── model
 │   └── sentiment-model.pkl
@@ -58,12 +60,6 @@ can compare the overall sentiment of a review to its “star rating” and try t
 │   ├── 04-modelling.ipynb
 │   ├── 05-findings.ipynb
 │   ├── __pycache__
-│   │   └── source.cpython-38.pyc
-│   ├── archive
-│   │   ├── basic-logistic-archive.ipynb
-│   │   ├── decision-tree-archive.ipynb
-│   │   ├── decision-tree_smote.ipynb
-│   │   └── spaCy-exploration-one-MISC.ipynb
 │   ├── basic-logistic_2grams.ipynb
 │   ├── basic-logistic_ngrams.ipynb
 │   ├── decision-tree_2grams.ipynb
@@ -71,25 +67,19 @@ can compare the overall sentiment of a review to its “star rating” and try t
 │   ├── first_explore.ipynb
 │   ├── model-comparison.ipynb
 │   ├── newEDA.ipynb
-│   ├── preprocessing_2grams.ipynb
-│   ├── preprocessing_ngrams.ipynb
-│   ├── preprocessing_single-words.ipynb
+│   ├── preprocessing_1_2grams.ipynb
 │   ├── randomforest.ipynb
 │   ├── randomforest_2grams.ipynb
-│   └── source.py
+│   ├── source.py
+│   └── archive
 ├── references
 │   └── papers.md
 ├── reports
 │   ├── Sprint 1 presentation.pdf
 │   ├── Sprint 2 (1).pdf
 │   └── figures
-│       ├── dist.png
-│       ├── logregout.png
-│       ├── output2.png
-│       ├── project-flowchart.svg
-│       └── vectorexample.png
-└── src
-
+└── src 
+```
 
 * `data` 
 

@@ -4,8 +4,12 @@ import pandas as pd
 import numpy as np
 import gzip
 import json
+import string
 import matplotlib.pyplot as plt
-from sklearn.feature_extraction.text import CountVectorizer  
+from sklearn.feature_extraction.text import CountVectorizer
+from nltk.stem import PorterStemmer
+import re
+from nltk.corpus import stopwords
 
 
 
@@ -64,3 +68,29 @@ def bow_review(review_train,review_test,stop=None, ngrams=(0,1)):
     return(bagofwords, small_transformed_train, small_transformed_test)
     
     
+def my_tokenizer(document):
+    stop_words = stopwords.words('english')
+    # remove punctuation
+    for punct in string.punctuation:
+        document=document.replace(punct,'')
+
+    # tokenize - split on whitespace
+    tokenized_document = document.split(' ')
+
+    # pattern denoting a sequence of at least 2 alphanumeric characters
+    pattern=r"(?u)\b\w\w+\b"
+
+        # tokenize - split by matching a pattern
+    tokenized_document = re.findall(pattern, document)
+    
+    # remove stopwords before stemming or lemmatization
+    tokenized_document = [word for word in tokenized_document if word not in stop_words]
+
+
+    stemmed_tokens_list = []
+    for i in tokenized_document:
+        token = PorterStemmer().stem(i)
+        stemmed_tokens_list.append(token)
+    return stemmed_tokens_list
+
+
