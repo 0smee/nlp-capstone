@@ -94,3 +94,20 @@ def my_tokenizer(document):
     return stemmed_tokens_list
 
 
+# function for downsampling X_train - originally from basic-logistic
+def downsample_binary(y_t, x_t, mini = 0, maj=1):
+    # combine x and y
+    data = pd.concat([y_t, x_t], axis=1)
+    target_name = data.columns[0]
+    # count the instances of the minority class
+    minority_count = data[data[target_name] == mini].shape[0]
+    # random sample from the majority class
+    majority_sample = data[data[target_name] == maj].sample(n=minority_count, random_state=42)
+    
+    # merge together
+    balanced_df = pd.concat([data[data["binary"] == mini], majority_sample])
+    
+    # Shuffle
+    balanced_df = balanced_df.sample(frac=1, random_state=42).reset_index(drop=True)
+    
+    return balanced_df
