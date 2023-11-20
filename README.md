@@ -53,7 +53,7 @@ can compare the overall sentiment of a review to its “star rating” and try t
 ├── README.md
 ├── README.md.save
 ├── data
-│   └── https://drive.google.com/drive/folders/1vIgwqKBAsJvMQIZZfR_u03OFdF4BsEj5?usp=sharing
+│   └── [Google Drive](https://drive.google.com/drive/folders/1vIgwqKBAsJvMQIZZfR_u03OFdF4BsEj5?usp=sharing)
 ├── environment.yml
 ├── model
 │   └── sentiment-model.pkl
