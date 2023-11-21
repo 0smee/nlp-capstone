@@ -3,3 +3,5 @@ data/
 
 # Jupyter Notebook
 .ipynb_checkpoints
+
+*.pkl
