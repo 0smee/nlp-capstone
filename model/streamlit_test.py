@@ -25,10 +25,10 @@ if prediciton == 1:
 else:
     st.write(f"Prediction: Negative!: Confidence: {proba[0]*100:.0f}%")
 
-vec = joblib.load("text_vectorizer.pkl")
+# vec = joblib.load("text_vectorizer.pkl")
 
-transformed_text = vec.transform([text])
-feature_names = vec.get_feature_names_out()
+transformed_text = model[0].transform([text])
+feature_names = model[0].get_feature_names_out()
 if option in ["logistic-bal-model.pkl", "logistic-unbal-model.pkl"]:
     coefficients = model[1].coef_[0]
     contributions = transformed_text.multiply(coefficients)

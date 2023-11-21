@@ -5,3 +5,8 @@ data/
 .ipynb_checkpoints
 
 *.pkl
+notebooks/__pycache__/*
+model/__pycache__/*
+
+*.save
+*.ipynb_checkpoints
