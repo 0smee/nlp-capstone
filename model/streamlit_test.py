@@ -4,7 +4,8 @@ import pandas as pd
 import streamlit as st
 import joblib
 import source 
-st.write('Sentiment Analysis of Amazon reviews')
+st.header('Sentiment Analysis of Amazon reviews')
+st.subheader('Edo Spigel Emmerich')
 st.subheader("Model")
 choice = ["logistic-bal-model.pkl", "logistic-unbal-model.pkl", "decision-tree-bal-model.pkl", "decision-tree-unbal-model.pkl", "random-forest-unbal-model.pkl", "random-forest-bal-model.pkl"]
 
@@ -13,7 +14,9 @@ option = st.selectbox('Which model do you want to test out?',choice)
 # Load the model using joblib
 model = joblib.load(option)
 # Set up input field with st.text_input()
-text = st.text_input(f"{option}: Enter your review here:", "Rubbish phone")
+st.write(f"Choice: {option}")
+text = st.text_input("Enter your review here:", "Rubbish phone")
+
 # Use the model to predict sentiment & save to a variable called prediction
 
 prediciton = model.predict({text})
