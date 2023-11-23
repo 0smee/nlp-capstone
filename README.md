@@ -31,14 +31,14 @@ can compare the overall sentiment of a review to its “star rating” and try t
 ...
 ...
 ### Overview of current model performance
-| Model                                   | Parameters                                                              | Balanced data?                        | Accuracy | Precision | Recall | F1-Score | Notes                                      |
+| Model                                   | Parameters                                                              | Balanced data?                        | Accuracy | Precision on Negative class | Recall on Negative class | F1-Score on Negative class| Notes                                      |
 | --------------------------------------- | ----------------------------------------------------------------------- | ------------------------------------- | -------- | --------- | ------ | -------- | ------------------------------------------ |
-| Logistic Regression                     | C=10,penalty='l1', solver='liblinear',random_state=42                   | Unbalanced (76% vs 24%)               | 0.72     | 0.71      | 0.79   | 0.70     |                                            |
-| Logistic Regression                     | C=10,penalty='l1', solver='liblinear',random_state=42                   | Balanced (Majority class downsampled) | 0.79     | 0.74      | 0.80   | 0.75     |                                            |
-| Decision Tree                           | criterion='entropy', max_depth=25, min_samples_leaf=5, random_state=12 | Unbalanced (76% vs 24%)               | 0.79     | 0.71      | 0.64   | 0.66|
-| Decision Tree                           | criterion='entropy', max_depth=30, min_samples_leaf=5,random_state=12 | Balanced (Majority class downsampled) | 0.73     | 0.68      | 0.73   | 0.68     |                                            |
-| Random Forest (currently not optimised) | n_estimators=30, random_state=42                                        | Unbalanced (76% vs 24%)               | 0.85     | 0.81      | 0.76   | 0.78     |                                            |
-| Random Forest (currently not optimised) | n_estimators=30, random_state=42                                        | Balanced (Majority class downsampled) | 0.79     | 0.74      | 0.80   | 0.75     |                                            |
+| Logistic Regression                     | C=10,penalty='l1', solver='liblinear',random_state=42                   | Unbalanced (76% vs 24%)               | 0.73     | 0.42      | 0.31   | 0.36     |                                            |
+| Logistic Regression                     | C=10,penalty='l1', solver='liblinear',random_state=42                   | Balanced (Majority class downsampled) | 0.82     | 0.58      | 0.83   | 0.68     |                                            |
+| Decision Tree                           | criterion='entropy', max_depth=25, min_samples_leaf=5, random_state=12 | Unbalanced (76% vs 24%)               | 0.75     | 0.46      | 0.21   | 0.28|
+| Decision Tree                           | criterion='entropy', max_depth=40, min_samples_leaf=10,random_state=12 | Balanced (Majority class downsampled) | 0.73     | 0.47      | 0.80   | 0.59     |                                            |
+| Random Forest | max_depth=300, n_estimators=60, random_state=42                                        | Unbalanced (76% vs 24%)               | 0.71     | 0.40      | 0.37   | 0.38     |                                            |
+| Random Forest | max_depth=600, n_estimators=80, random_state=42                                        | Balanced (Majority class downsampled) | 0.81     | 0.57      | 0.83   | 0.68     |                                            |
 
 ![ROC Curves GIF](https://github.com/brainstation-datascience/capstone-project-0smee/blob/ff7d8901998f477f44430eadfc6a524c0d8ab47b/gif/rocgif.gif)
 
