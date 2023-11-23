@@ -42,16 +42,16 @@ def simplifyReviews(dataframe):
     out = out.drop_duplicates(ignore_index=True)
     return out
     
-def rating_distribution(data):
+def rating_distribution(data, fs=14):
 
     values, counts = np.unique(data['overall'], return_counts=True)
     normalized_counts = counts/counts.sum()
 
     plt.figure()
     plt.bar(values, normalized_counts * 100)
-    plt.xlabel("Review rating")
-    plt.ylabel('% of reviews')
-    plt.title("Rating distribution")
+    plt.xlabel("Review rating", fontsize=fs)
+    plt.ylabel('% of reviews', fontsize=fs)
+    plt.title("Rating distribution", fontsize=fs)
     plt.show()
     return normalized_counts
 # bag of words review

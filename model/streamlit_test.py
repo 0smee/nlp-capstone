@@ -39,14 +39,14 @@ if option in ["logistic-bal-model.pkl", "logistic-unbal-model.pkl"]:
     # feature contributions
     contributions_df = pd.DataFrame({
         'Feature': feature_names,  
-        'Contribution': np.abs(contributions_dense)
+        'Contribution': contributions_dense
     }).sort_values(by="Contribution",ascending=False)
     contributions_df['Feature'] = contributions_df['Feature'].str.replace(r'^.*gram__', '', regex=True)
 
 
     # contributions of features
     st.write("Feature contributions to the prediction:")
-    st.dataframe(contributions_df.head(5))
+    st.dataframe(pd.concat(contributions_df.head(3), contributions_df.tail(3), axis=0))
     # st.write(vec)
 # elif option in ["random-forest-unbal-model.pkl", "random-forest-bal-model.pkl"]:
 #     fi = model[1].feature_importances_
