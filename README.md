@@ -40,6 +40,9 @@ can compare the overall sentiment of a review to its “star rating” and try t
 | Random Forest (currently not optimised) | n_estimators=30, random_state=42                                        | Unbalanced (76% vs 24%)               | 0.85     | 0.81      | 0.76   | 0.78     |                                            |
 | Random Forest (currently not optimised) | n_estimators=30, random_state=42                                        | Balanced (Majority class downsampled) | 0.79     | 0.74      | 0.80   | 0.75     |                                            |
 
+![ROC Curves GIF](../gif/rocgif.gif)
+
+
 ...
 ...
 ...
