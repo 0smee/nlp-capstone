@@ -13,13 +13,19 @@ from nltk.corpus import stopwords
 
 
 
-# These functions based on https://cseweb.ucsd.edu/~jmcauley/datasets/amazon_v2/
+# These first two functions based on https://cseweb.ucsd.edu/~jmcauley/datasets/amazon_v2/
 def parse(path):
+    '''
+    yield json objects from a gzip compressed file
+    '''
     g = gzip.open(path, 'rb')
     for l in g:
         yield json.loads(l)  # Using json.loads instead of eval()
 
 def getDF(path):
+    '''
+    creates dataframe from json objects in a file
+    '''
     i = 0
     df = {}
     for d in parse(path):
@@ -43,7 +49,9 @@ def simplifyReviews(dataframe):
     return out
     
 def rating_distribution(data, fs=14):
-
+    '''
+    plots and returns normalized rating distribution
+    '''
     values, counts = np.unique(data['overall'], return_counts=True)
     normalized_counts = counts/counts.sum()
 
@@ -56,6 +64,9 @@ def rating_distribution(data, fs=14):
     return normalized_counts
 # bag of words review
 def bow_review(review_train,review_test,stop=None, ngrams=(0,1)): 
+    '''
+    creates and applies bag of words transformation
+    '''
     # 1. Instantiate 
     bagofwords = CountVectorizer(stop_words=stop, ngram_range=ngrams)
 
@@ -69,6 +80,27 @@ def bow_review(review_train,review_test,stop=None, ngrams=(0,1)):
     
     
 def my_tokenizer(document):
+    '''
+    Processes a given document.
+    This function performs multiple preprocessing steps on text data:
+    - Removes all punctuation from the document.
+    - Splits the document into tokens based on whitespace.
+    - Filters out tokens that do not match a specified pattern (minimum 2 alphanumeric characters).
+    - Removes stopwords, which are commonly occurring words that may not contribute to the overall meaning (nltk Stop Words).
+    - Applies stemming to each token to reduce them to their root form (PorterStemmer).
+
+    Parameters:
+    - document (Type: String): The text document to be tokenized and processed.
+
+    Returns:
+    - stemmed_tokens_list: A list of stemmed tokens from the processed document, 
+      with stopwords and punctuation removed.
+
+    Note:
+    - The function uses the nltk library's PorterStemmer for stemming and its list of English stopwords.
+    - Punctuation is defined as per the string.punctuation constant in Python's string module.
+
+    '''
     stop_words = stopwords.words('english')
     # remove punctuation
     for punct in string.punctuation:
@@ -96,6 +128,9 @@ def my_tokenizer(document):
 
 # function for downsampling X_train - originally from basic-logistic
 def downsample_binary(y_t, x_t, mini = 0, maj=1):
+    '''
+    balances dataset by downsampling majority class
+    '''
     # combine x and y
     data = pd.concat([y_t, x_t], axis=1)
     target_name = data.columns[0]

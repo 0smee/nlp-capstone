@@ -46,7 +46,7 @@ if option in ["logistic-bal-model.pkl", "logistic-unbal-model.pkl"]:
 
     # contributions of features
     st.write("Feature contributions to the prediction:")
-    st.dataframe(pd.concat(contributions_df.head(3), contributions_df.tail(3), axis=0))
+    st.dataframe(pd.concat([contributions_df.head(3), contributions_df.tail(3)], axis=0))
     # st.write(vec)
 # elif option in ["random-forest-unbal-model.pkl", "random-forest-bal-model.pkl"]:
 #     fi = model[1].feature_importances_
