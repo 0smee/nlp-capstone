@@ -100,6 +100,7 @@ Data folder:
 
 * `model`
     - joblib dump of final model / model object
+    - [https://drive.google.com/drive/folders/1MPfcePpCU3atEoUAYmalRZPhgdG-80cg?usp=sharing]
 
 * `notebooks`
     - contains all final notebooks involved in the project
