@@ -15,11 +15,24 @@ I plan to try add more context in the preprocessing stage, and improve the commu
 
 ### Project Overview
 
-I am interested in understanding the reliability of reviews left by customers online. Consumers’ online shopping experience can be improved by better understanding
-the reviews that are left on products. By improving the customer experience, online retailers will continue to see a huge increase in total sales. First time buyers will be
-particularly impacted by reviews, as they search for their ideal product. Users making large purchases will also be impacted by the quality of reviews available.
-Organisations or people following a budget will also use reviews to guide their purchase. We can use machine learning to help better understand the quality of reviews. For example, we can perform sentiment analysis to gain further insights of the text contents of a review, and try to understand how reliable a source the reviewer is. We
-can compare the overall sentiment of a review to its “star rating” and try to understand discrepancies in these two different forms of reviews.
+# Identifying customer painpoints in Amazon Reviews 
+#### Capstone project BrainStation - Edo Spigel Emmerich
+I will lay out the aims of this capstone project:
+1. *How can we use machine learning to better understand the sentiment of reviews?*
+2. *How can we use machine learning to understand common user complaints about products?*
+
+By utilising machine learning techniques, I hope to be able to build a system which identifies key factors leading to either a positive or negative review. Due to the class imbalance favoring positive reviews, which is discussed later, it will particularly be interesting to try understand in which ways different models can interpret different types of negative reviews. Being able to extract and track common and new issues surrounding a product is an invaluable tool to a business and can act as a first line of service when identifying customer painpoints. 
+
+I will try and create a system which allows the user to utilise different models in order to uncover the key reasons behind the rating of reviews. This should work both on an individual textual input (1 review), as well as on a larger set of reviews (Later).
+
+There are many services available to perform Sentiment Analysis for businesses, such as [Amazon Comprehend](https://aws.amazon.com/comprehend/) and [Google Cloud Natural Language](https://cloud.google.com/natural-language/docs/analyzing-sentiment), however these solutions are often costly, and being able to perform this analysis *inhouse* is more cost-efficent, as well as giving the business user much more control. 
+
+#### The data:
+The data was collated by:\
+Justifying recommendations using distantly-labeled reviews and fined-grained aspects\
+*Jianmo Ni, Jiacheng Li, Julian McAuley University of California, San Diego*\
+Empirical Methods in Natural Language Processing (EMNLP), 2019\
+[pdf](https://cseweb.ucsd.edu/~jmcauley/pdfs/emnlp19a.pdf)
 ### Walkthrough Demo
 
 ...
