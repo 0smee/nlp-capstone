@@ -61,37 +61,6 @@ Empirical Methods in Natural Language Processing (EMNLP), 2019\
 
 ### Project Organization
 
-```
-.
-├── LICENSE
-├── Makefile
-├── README.md
-├── README.md.save
-├── data
-│   └── [Google Drive](https://drive.google.com/drive/folders/1vIgwqKBAsJvMQIZZfR_u03OFdF4BsEj5?usp=sharing)
-├── environment.yml
-├── model
-│   └── sentiment-model.pkl
-├── notebooks
-│   ├── 01-first_explore.ipynb
-│   ├── 02-newEDA.ipynb
-│   ├── 03-preprocessing.ipynb
-│   ├── 04-logistic-model.ipynb
-│   ├── 05-decision-tree-model.ipynb
-│   ├── 06-randomforest-model.ipynb
-│   ├── 07-model-comparison.ipynb
-│   ├── 100-modelling.ipynb
-│   ├── 101-modelling.ipynb
-│   ├── README.md
-│   ├── __pycache__
-│   ├── archive
-│   └── source.py
-├── references
-│   └── papers.md
-├── reports
-│   └── figures
-└── src
-```
 
 ```
 .
