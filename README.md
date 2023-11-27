@@ -93,6 +93,39 @@ Empirical Methods in Natural Language Processing (EMNLP), 2019\
 └── src
 ```
 
+```
+.
+├── LICENSE
+├── Makefile
+├── README.md
+├── README.md.save
+├── data
+│   └── [Google Drive](https://drive.google.com/drive/folders/1vIgwqKBAsJvMQIZZfR_u03OFdF4BsEj5?usp=sharing)
+├── environment.yml
+├── gif
+├── environment.yml
+├── model
+│   └── [Google Drive](https://drive.google.com/drive/folders/1MPfcePpCU3atEoUAYmalRZPhgdG-80cg?usp=sharing)
+├── notebooks
+│   ├── 01-first_explore.ipynb
+│   ├── 02-newEDA.ipynb
+│   ├── 03-preprocessing.ipynb
+│   ├── 04-logistic-model.ipynb
+│   ├── 05-decision-tree-model.ipynb
+│   ├── 06-randomforest-model.ipynb
+│   ├── 07-model-comparison.ipynb
+│   ├── README.md
+│   ├── __pycache__
+│   │   └── source.cpython-38.pyc
+│   ├── archive
+│   └── source.py
+├── references
+│   └── papers.md
+├── reports
+└── src
+```
+
+
 * `data` 
 
 Data folder:
@@ -100,7 +133,7 @@ Data folder:
 
 * `model`
     - joblib dump of final model / model object
-    - [https://drive.google.com/drive/folders/1MPfcePpCU3atEoUAYmalRZPhgdG-80cg?usp=sharing]
+    - https://drive.google.com/drive/folders/1MPfcePpCU3atEoUAYmalRZPhgdG-80cg?usp=sharing
 
 * `notebooks`
     - contains all final notebooks involved in the project
