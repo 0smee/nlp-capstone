@@ -4,6 +4,7 @@ data/
 # Jupyter Notebook
 .ipynb_checkpoints
 
+*.parquet
 *.pkl
 notebooks/__pycache__/*
 model/__pycache__/*
